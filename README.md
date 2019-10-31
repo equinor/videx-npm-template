@@ -34,6 +34,17 @@ Fields that need to be modified are:
 - **bugs.url**: Should point to "GitHub repository"/issues.
 - **homepage**: Could point to "GitHub repository"#readme.
 
+### Install dependencies
+
+Install all dev dependencies defined in package.json using node.
+
+
+```
+npm install
+```
+
+## Usage
+
 ## Sample function
 
 <table style="width:auto;">

@@ -20,9 +20,10 @@
     "url": "git+https://github.com/equinor/videx-npm-template.git"
   },
   "keywords": [
-    "videx", "template"
+    "videx",
+    "template"
   ],
-  "author": "Someone",
+  "author": "Tom Kristian Tjemsland",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/equinor/videx-npm-template/issues"
