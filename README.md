@@ -16,7 +16,7 @@ Template for npm packages with testing and automatic documentation.
 
 ### Cloning repository
 
-Start by cloning the template repository to an appropriate directory.
+Start by cloning the template repository to desired directory.
 
 ```
 git clone https://github.com/equinor/videx-npm-template.git
@@ -44,6 +44,11 @@ npm install
 ```
 
 ## Usage
+
+### Create package
+
+The entry point for the actual npm package is defined as 'src/index.js'. This can be changed within 'rollup.config.js'.
+All public variables, functions and classes should be exported within this file.
 
 ## Sample function
 
