@@ -1,6 +1,12 @@
 # Videx npm template
 
-Template for npm packages with testing and automatic documentation
+Template for npm packages with testing and automatic documentation.
+
+- **Compiler**: [Babel](https://www.npmjs.com/package/@babel/core)
+- **Module bundler**: [Rollup](https://www.npmjs.com/package/rollup)
+- **Testing**: [Jest](https://www.npmjs.com/package/jest)
+- **Documentation**: [JSDoc](https://www.npmjs.com/package/jsdoc)
+- **JSDoc template**: [Docdash](https://www.npmjs.com/package/docdash)
 
 # TODO: Fix under
 
