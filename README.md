@@ -66,7 +66,7 @@ export function hello(name = 'npm') {
 
 ```js
 export function hello(name) {
-  if (name === undefined) name  = 'npm';
+  if (name === undefined) name = 'npm';
   return `Hello ${name}!`;
 }
 ```
