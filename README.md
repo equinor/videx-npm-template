@@ -54,11 +54,15 @@ Any public variables, functions and classes should be exported within this file.
 
 Example of how default values can be avoided:
 
+#### Before
+
 ```js
 export function hello(name = 'npm') {
   return `Hello ${name}!`;
 }
 ```
+
+#### After
 
 ```js
 export function hello(name) {
