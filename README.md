@@ -131,21 +131,25 @@ Attemps to publish the package to npm. As part of the publishing process, the so
 
 ## Publish documentation
 
-GitHub pages is used to show documentation. Guide for setting up GitHub pages can be seen below.
+GitHub pages is used to show documentation. To set up GitHub pages, start by navigating to the settings tab within the GitHub repository.
 
 ![Settings Tab](images/settings-tab.png)
 
-Navigate to the settings tab within the GitHub repository.
+Scroll down and set GitHub pages source to the docs-folder of the master branch.
 
 ![Settings Tab](images/github-pages.png)
 
-Scroll down and set GitHub pages source to be the docs-folder of the master branch.
+Publishing the documentation will produce a link. This link can be included in the README for easy navigation.
+
+![Settings Tab](images/github-pages-published.png)
+
+Sample documentation can be found [here](https://equinor.github.io/videx-npm-template/).
 
 ## Sample function
 
 <table style="width:auto;">
   <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#clamp">hello</a></td>
+    <td><a href="https://equinor.github.io/videx-npm-template/global.html#hello">hello</a></td>
   </tr>
 </table>
 
