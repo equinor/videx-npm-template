@@ -45,4 +45,6 @@ Where X.X.X is desired version number.
   </tr>
 </table>
 
+<br/>
+
 ![Equinor Logo](images/equinor-logo.png)

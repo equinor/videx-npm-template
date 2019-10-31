@@ -20,7 +20,7 @@
     "url": "git+https://github.com/equinor/videx-math.git"
   },
   "keywords": [
-    "math"
+    "videx", "math"
   ],
   "author": "Tom Kristian Tjemsland",
   "license": "MIT",
