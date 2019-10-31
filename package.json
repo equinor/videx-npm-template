@@ -1,7 +1,7 @@
 {
-  "name": "@equinor/videx-math",
-  "version": "1.0.9",
-  "description": "A library with math used by Videx.",
+  "name": "@equinor/videx-npm-template",
+  "version": "1.0.0",
+  "description": "Template for npm packages with testing and automatic documentation.",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "scripts": {
@@ -17,17 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/equinor/videx-math.git"
+    "url": "git+https://github.com/equinor/videx-npm-template.git"
   },
   "keywords": [
-    "videx", "math"
+    "videx", "template"
   ],
-  "author": "Tom Kristian Tjemsland",
+  "author": "Someone",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/equinor/videx-math/issues"
+    "url": "https://github.com/equinor/videx-npm-template/issues"
   },
-  "homepage": "https://github.com/equinor/videx-math#readme",
+  "homepage": "https://github.com/equinor/videx-npm-template#readme",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
