@@ -8,46 +8,25 @@ Template for npm packages with testing and automatic documentation.
 - **Documentation**: [JSDoc](https://www.npmjs.com/package/jsdoc)
 - **JSDoc template**: [Docdash](https://www.npmjs.com/package/docdash)
 
-# TODO: Fix under
+# Repository
 
-- [GitHub Repository](https://github.com/equinor/videx-math)
-- [Documentation](https://equinor.github.io/videx-math)
+- [GitHub](https://github.com/equinor/videx-npm-template)
 
-## Installation
-```js
-npm install --save @equinor/videx-math
+## Setup guide
+
+### Cloning repository
+
+Start by cloning the template repository to an appropriate directory.
+
+```
+git clone https://github.com/equinor/videx-npm-template.git
 ```
 
-## Usage
-
-```js
-// ES6
-import { clamp, lerp, ... } from '@equinor/videx-math';
-
-// ObservableHQ
-const someVar = require('@equinor/videx-math@X.X.X/dist/bundle.umd.js');
-const lerp = someVar.lerp;
-```
-Where X.X.X is desired version number.
-
-## Available functions
+## Sample function
 
 <table style="width:auto;">
   <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#clamp">clamp</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#degrees">degrees</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#lerp">lerp</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#nrad">nrad</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#radians">radians</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#round">round</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#seq">seq</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#seqI">seqI</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#smoothstep">smoothstep</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#step">step</a></td>
+    <td><a href="https://equinor.github.io/videx-math/global.html#clamp">hello</a></td>
   </tr>
 </table>
 
