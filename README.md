@@ -39,7 +39,6 @@ Fields that need to be modified are:
 
 Install all dev dependencies defined in package.json using node.
 
-
 ```
 npm install
 ```
@@ -50,14 +49,6 @@ npm install
 
 The entry point for the actual npm package is defined as 'src/index.js'. This can be changed within 'rollup.config.js'.
 Any public variables, functions and classes should be exported within this file.
-
-### Building/Compiling
-
-```
-npm run build
-```
-
-Compiles the code found within the src-folder. Build is outputted to a new dist-folder.
 
 ### Document generation
 
@@ -71,7 +62,41 @@ Three part process:
 2. Automatically generates documentation to a new docs-folder.
 3. Copies the images-folder into docs.
 
-The copying of images makes it possible to refer to local images in the README.md!
+The copying of images makes it possible to refer to local images within the README!
+
+### Creating tests
+
+All tests are defined within the test-folder. Jest naming convention is to place tests for SOMESCRIPT.js in a single file SOMESCRIPT.test.js.
+
+### Testing
+
+```
+npm run test
+```
+
+Executes all tests defined within the test folder.
+
+```
+npm run test:watch
+```
+
+Executes all tests, but does not return immediately. Makes it possible to re-run failed tests quickly.
+
+### Building/Compiling
+
+```
+npm run build
+```
+
+Compiles the code found within the src-folder. Build is outputted to a new dist-folder.
+
+### Publication
+
+```
+npm run pub
+```
+
+Attemps to publish the package to npm. As part of the publishing process, the source code is re-compiled.
 
 ## Sample function
 
