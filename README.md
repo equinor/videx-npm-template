@@ -50,6 +50,33 @@ npm install
 The entry point for the actual npm package is defined as 'src/index.js'. This can be changed within 'rollup.config.js'.
 Any public variables, functions and classes should be exported within this file.
 
+**Important**: Default values on input parameters are strongly discouraged. Babel compilation integrates these variables into the functions themselves, which breaks documentation and IntelliSense.
+
+Example of how default values can be avoided:
+
+```js
+export function hello(name = 'npm') {
+  return `Hello ${name}!`;
+}
+```
+
+```js
+export function hello(name) {
+  if (name === undefined) name  = 'npm';
+  return `Hello ${name}!`;
+}
+```
+
+Optional parameters should be defined in the documentation!
+
+```js
+/**
+ * ...
+ * @param {String} [name='npm'] Name to greet (Default: 'npm')
+ * ...
+ */
+```
+
 ### Document generation
 
 ```
@@ -97,6 +124,10 @@ npm run pub
 ```
 
 Attemps to publish the package to npm. As part of the publishing process, the source code is re-compiled.
+
+## Publish documentation
+
+GitHub pages is used to show documentation.
 
 ## Sample function
 

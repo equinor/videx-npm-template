@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#clamp">clamp</a></li><li><a href="global.html#degrees">degrees</a></li><li><a href="global.html#lerp">lerp</a></li><li><a href="global.html#nrad">nrad</a></li><li><a href="global.html#radians">radians</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#seq">seq</a></li><li><a href="global.html#seqI">seqI</a></li><li><a href="global.html#smoothstep">smoothstep</a></li><li><a href="global.html#step">step</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#hello">hello</a></li></ul>
 </nav>
 
 <div id="main">
@@ -57,43 +57,79 @@
 
 
     <section class="readme">
-        <article><h1>Videx math</h1>
-<p>A library with math functions used by Videx.</p>
+        <article><h1>Videx npm template</h1>
+<p>Template for npm packages with testing and automatic documentation.</p>
 <ul>
-<li><a href="https://github.com/equinor/videx-math">GitHub Repository</a></li>
-<li><a href="https://equinor.github.io/videx-math">Documentation</a></li>
+<li><strong>Compiler</strong>: <a href="https://www.npmjs.com/package/@babel/core">Babel</a></li>
+<li><strong>Module bundler</strong>: <a href="https://www.npmjs.com/package/rollup">Rollup</a></li>
+<li><strong>Testing</strong>: <a href="https://www.npmjs.com/package/jest">Jest</a></li>
+<li><strong>Documentation</strong>: <a href="https://www.npmjs.com/package/jsdoc">JSDoc</a></li>
+<li><strong>JSDoc template</strong>: <a href="https://www.npmjs.com/package/docdash">Docdash</a></li>
+<li><strong>Code compressor</strong>: <a href="https://www.npmjs.com/package/terser">Terser</a></li>
 </ul>
-<h2>Installation</h2>
-<pre class="prettyprint source lang-js"><code>npm install --save @equinor/videx-math
+<h2>Repository</h2>
+<ul>
+<li><a href="https://github.com/equinor/videx-npm-template">GitHub</a></li>
+</ul>
+<h2>Setup guide</h2>
+<h3>Cloning repository</h3>
+<p>Start by cloning the template repository to desired directory.</p>
+<pre class="prettyprint source"><code>git clone https://github.com/equinor/videx-npm-template.git
+</code></pre>
+<h3>Modify package.json</h3>
+<p>Fields that need to be modified are:</p>
+<ul>
+<li><strong>name</strong>: The name of the npm package.</li>
+<li><strong>description</strong>: The description of the npm package.</li>
+<li><strong>repository.url</strong>: Should point to the GitHub repository.</li>
+<li><strong>keywords</strong>: Keywords to make it easier to find the package on npm.</li>
+<li><strong>author</strong>: Package author. For multiple authors, consider using '<a href="https://docs.npmjs.com/files/package.json#people-fields-author-contributors">contributors</a>'.</li>
+<li><strong>bugs.url</strong>: Should point to &quot;GitHub repository&quot;/issues.</li>
+<li><strong>homepage</strong>: Could point to &quot;GitHub repository&quot;#readme.</li>
+</ul>
+<h3>Install dependencies</h3>
+<p>Install all dev dependencies defined in package.json using node.</p>
+<pre class="prettyprint source"><code>npm install
 </code></pre>
 <h2>Usage</h2>
-<pre class="prettyprint source lang-js"><code>// es6
-import { clamp, lerp, ... } from '@equinor/videx-math';
-
-// ObservableHQ
-const someVar = require('@equinor/videx-math@X.X.X/dist/bundle.umd.js');
-const lerp = someVar.lerp;
+<h3>Creating package</h3>
+<p>The entry point for the actual npm package is defined as 'src/index.js'. This can be changed within 'rollup.config.js'.
+Any public variables, functions and classes should be exported within this file.</p>
+<h3>Document generation</h3>
+<pre class="prettyprint source"><code>npm run docs
 </code></pre>
-<p>where X.X.X is desired version number.</p>
-<h2>Available functions</h2>
+<p>Three part process:</p>
+<ol>
+<li>Deletes the docs-folder, if it exists.</li>
+<li>Automatically generates documentation to a new docs-folder.</li>
+<li>Copies the images-folder into docs.</li>
+</ol>
+<p>The copying of images makes it possible to refer to local images within the README!</p>
+<h3>Creating tests</h3>
+<p>All tests are defined within the test-folder. Jest naming convention is to place tests for SOMESCRIPT.js in a single file SOMESCRIPT.test.js.</p>
+<h3>Testing</h3>
+<pre class="prettyprint source"><code>npm run test
+</code></pre>
+<p>Executes all tests defined within the test folder.</p>
+<pre class="prettyprint source"><code>npm run test:watch
+</code></pre>
+<p>Executes all tests, but does not return immediately. Makes it possible to re-run failed tests quickly.</p>
+<h3>Building/Compiling</h3>
+<pre class="prettyprint source"><code>npm run build
+</code></pre>
+<p>Compiles the code found within the src-folder. Build is outputted to a new dist-folder.</p>
+<h3>Publication</h3>
+<pre class="prettyprint source"><code>npm run pub
+</code></pre>
+<p>Attemps to publish the package to npm. As part of the publishing process, the source code is re-compiled.</p>
+<h2>Publish documentation</h2>
+<h2>Sample function</h2>
 <table style="width:auto;">
   <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#clamp">clamp</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#degrees">degrees</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#lerp">lerp</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#nrad">nrad</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#radians">radians</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#round">round</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#seq">seq</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#seqI">seqI</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://equinor.github.io/videx-math/global.html#smoothstep">smoothstep</a></td>
-    <td><a href="https://equinor.github.io/videx-math/global.html#step">step</a></td>
+    <td><a href="https://equinor.github.io/videx-math/global.html#clamp">hello</a></td>
   </tr>
 </table>
+<br/>
 <p><img src="images/equinor-logo.png" alt="Equinor Logo"></p></article>
     </section>
 
@@ -109,7 +145,7 @@ const lerp = someVar.lerp;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Wed Oct 30 2019 16:54:34 GMT+0100 (GMT+01:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Oct 31 2019 15:33:34 GMT+0100 (Central European Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
