@@ -71,7 +71,7 @@ export function hello(name) {
 }
 ```
 
-Optional parameters should be defined in the documentation!
+Optional parameters should be documented!
 
 ```js
 /**
@@ -131,7 +131,11 @@ Attemps to publish the package to npm. As part of the publishing process, the so
 
 ## Publish documentation
 
-GitHub pages is used to show documentation.
+GitHub pages is used to show documentation. Guide for setting up GitHub pages can be seen below.
+
+![Settings Tab](images/settings-tab.png)
+
+Navigate to the settings tab within the GitHub repository.
 
 ## Sample function
 
