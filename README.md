@@ -137,6 +137,10 @@ GitHub pages is used to show documentation. Guide for setting up GitHub pages ca
 
 Navigate to the settings tab within the GitHub repository.
 
+![Settings Tab](images/github-pages.png)
+
+Scroll down and set GitHub pages source to be the docs-folder of the master branch.
+
 ## Sample function
 
 <table style="width:auto;">
