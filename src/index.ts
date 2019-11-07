@@ -4,9 +4,8 @@
  * @return Greeting message
  *
  * @example
- * // Returns 'Hello npm!'
- * hello('npm');
+ * hello('npm'); // -> 'Hello npm!'
  */
-export function hello(name: string): string {
+export function hello(name: string = 'npm'): string {
   return `Hello ${name}!`;
 }

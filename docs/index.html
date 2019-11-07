@@ -67,13 +67,12 @@
 				<a href="#videx-npm-template" id="videx-npm-template" style="color: inherit; text-decoration: none;">
 					<h1>Videx npm template</h1>
 				</a>
-				<p>Template for npm packages with testing and automatic documentation.</p>
+				<p>Typescript template for npm packages with testing and automatic documentation.</p>
 				<ul>
-					<li><strong>Compiler</strong>: <a href="https://www.npmjs.com/package/@babel/core">Babel</a></li>
+					<li><strong>Compiler</strong>: <a href="https://www.npmjs.com/package/typescript">Typescript</a></li>
 					<li><strong>Module bundler</strong>: <a href="https://www.npmjs.com/package/rollup">Rollup</a></li>
 					<li><strong>Testing</strong>: <a href="https://www.npmjs.com/package/jest">Jest</a></li>
-					<li><strong>Documentation</strong>: <a href="https://www.npmjs.com/package/jsdoc">JSDoc</a></li>
-					<li><strong>JSDoc template</strong>: <a href="https://www.npmjs.com/package/docdash">Docdash</a></li>
+					<li><strong>Documentation</strong>: <a href="https://www.npmjs.com/package/typedoc">TypeDoc</a></li>
 					<li><strong>Code compressor</strong>: <a href="https://www.npmjs.com/package/terser">Terser</a></li>
 				</ul>
 				<a href="#repository" id="repository" style="color: inherit; text-decoration: none;">
@@ -114,29 +113,8 @@
 				<a href="#creating-package" id="creating-package" style="color: inherit; text-decoration: none;">
 					<h3>Creating package</h3>
 				</a>
-				<p>The entry point for the actual npm package is defined as &#39;src/index.js&#39;. This can be changed within &#39;rollup.config.js&#39;.
+				<p>The entry point for the actual npm package is defined as &#39;src/index.ts&#39;. This can be changed within &#39;rollup.config.js&#39;.
 				Any public variables, functions and classes should be exported within this file.</p>
-				<p><strong>Important</strong>: Default values on input parameters are strongly discouraged. Babel compilation integrates these variables into the functions themselves, which breaks documentation and IntelliSense.</p>
-				<p>Example of how default values can be avoided:</p>
-				<a href="#before" id="before" style="color: inherit; text-decoration: none;">
-					<h4>Before</h4>
-				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">name = <span class="hljs-string">'npm'</span></span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">${name}</span>!`</span>;
-}</code></pre>
-				<a href="#after" id="after" style="color: inherit; text-decoration: none;">
-					<h4>After</h4>
-				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">name</span>) </span>{
-  <span class="hljs-keyword">if</span> (name === <span class="hljs-literal">undefined</span>) name = <span class="hljs-string">'npm'</span>;
-  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">${name}</span>!`</span>;
-}</code></pre>
-				<p>Optional parameters should be documented!</p>
-				<pre><code class="language-js"><span class="hljs-comment">/**
- * ...
- * @param {String} [name='npm'] Name to greet (Default: 'npm')
- * ...
- */</span></code></pre>
 				<a href="#document-generation" id="document-generation" style="color: inherit; text-decoration: none;">
 					<h3>Document generation</h3>
 				</a>
@@ -144,13 +122,14 @@
 				<ol>
 					<li>Deletes the docs-folder, if it exists.</li>
 					<li>Automatically generates documentation to a new docs-folder.</li>
-					<li>Copies the images-folder into docs.</li>
+					<li>Copies the images-folder and .nojekyll into docs.</li>
 				</ol>
 				<p>The copying of images makes it possible to refer to local images within the README!</p>
+				<p>The empty .nojekyll file makes it possible to upload html pages starting wth underscore to GitHub pages.</p>
 				<a href="#creating-tests" id="creating-tests" style="color: inherit; text-decoration: none;">
 					<h3>Creating tests</h3>
 				</a>
-				<p>All tests are defined within the test-folder. Jest naming convention is to place tests for SOMESCRIPT.js in a single file SOMESCRIPT.test.js.</p>
+				<p>All tests are defined within the test-folder. Jest naming convention is to place tests for SOMESCRIPT.ts in a single file SOMESCRIPT.test.ts.</p>
 				<a href="#testing" id="testing" style="color: inherit; text-decoration: none;">
 					<h3>Testing</h3>
 				</a>
@@ -179,7 +158,7 @@
 				</a>
 				<table style="width:auto;">
 					<tr>
-						<td><a href="https://equinor.github.io/videx-npm-template/global.html#hello">hello</a></td>
+						<td><a href="https://equinor.github.io/videx-npm-template/modules/_index_.html#hello">hello</a></td>
 					</tr>
 				</table>
 				<br/>

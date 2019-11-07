@@ -18,7 +18,7 @@ export default [
       },
     ],
     external: [
-      ...Object.keys(pkg.dependencies),
+      ...Object.keys(pkg.dependencies || {}),
     ],
     plugins: [
       typescript({

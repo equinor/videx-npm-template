@@ -1,12 +1,11 @@
 # Videx npm template
 
-Template for npm packages with testing and automatic documentation.
+Typescript template for npm packages with testing and automatic documentation.
 
-- **Compiler**: [Babel](https://www.npmjs.com/package/@babel/core)
+- **Compiler**: [Typescript](https://www.npmjs.com/package/typescript)
 - **Module bundler**: [Rollup](https://www.npmjs.com/package/rollup)
 - **Testing**: [Jest](https://www.npmjs.com/package/jest)
-- **Documentation**: [JSDoc](https://www.npmjs.com/package/jsdoc)
-- **JSDoc template**: [Docdash](https://www.npmjs.com/package/docdash)
+- **Documentation**: [TypeDoc](https://www.npmjs.com/package/typedoc)
 - **Code compressor**: [Terser](https://www.npmjs.com/package/terser)
 
 ## Repository
@@ -47,39 +46,8 @@ npm install
 
 ### Creating package
 
-The entry point for the actual npm package is defined as 'src/index.js'. This can be changed within 'rollup.config.js'.
+The entry point for the actual npm package is defined as 'src/index.ts'. This can be changed within 'rollup.config.js'.
 Any public variables, functions and classes should be exported within this file.
-
-**Important**: Default values on input parameters are strongly discouraged. Babel compilation integrates these variables into the functions themselves, which breaks documentation and IntelliSense.
-
-Example of how default values can be avoided:
-
-#### Before
-
-```js
-export function hello(name = 'npm') {
-  return `Hello ${name}!`;
-}
-```
-
-#### After
-
-```js
-export function hello(name) {
-  if (name === undefined) name = 'npm';
-  return `Hello ${name}!`;
-}
-```
-
-Optional parameters should be documented!
-
-```js
-/**
- * ...
- * @param {String} [name='npm'] Name to greet (Default: 'npm')
- * ...
- */
-```
 
 ### Document generation
 
@@ -91,13 +59,15 @@ Three part process:
 
 1. Deletes the docs-folder, if it exists.
 2. Automatically generates documentation to a new docs-folder.
-3. Copies the images-folder into docs.
+3. Copies the images-folder and .nojekyll into docs.
 
 The copying of images makes it possible to refer to local images within the README!
 
+The empty .nojekyll file makes it possible to upload html pages starting wth underscore to GitHub pages.
+
 ### Creating tests
 
-All tests are defined within the test-folder. Jest naming convention is to place tests for SOMESCRIPT.js in a single file SOMESCRIPT.test.js.
+All tests are defined within the test-folder. Jest naming convention is to place tests for SOMESCRIPT.ts in a single file SOMESCRIPT.test.ts.
 
 ### Testing
 
@@ -149,7 +119,7 @@ Sample documentation can be found [here](https://equinor.github.io/videx-npm-tem
 
 <table style="width:auto;">
   <tr>
-    <td><a href="https://equinor.github.io/videx-npm-template/global.html#hello">hello</a></td>
+    <td><a href="https://equinor.github.io/videx-npm-template/modules/_index_.html#hello">hello</a></td>
   </tr>
 </table>
 
