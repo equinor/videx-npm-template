@@ -1,12 +1,12 @@
 /**
  * Return a string saying hello to name passed as input parameter.
- * @param {String} name Name to greet
- * @return {String} Greeting message
+ * @param name Name to greet
+ * @return Greeting message
  *
  * @example
  * // Returns 'Hello npm!'
  * hello('npm');
  */
-export function hello(name) {
+export function hello(name: string): string {
   return `Hello ${name}!`;
 }
